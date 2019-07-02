@@ -4,12 +4,44 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {   
+    
     public Transform player;
+    
+    private bool isMoving = false;
+
+    public void BotaoCerto()
+    {
+        if (!isMoving)
+        {
+            StartCoroutine(movimentacaoCerta());
+        }
+    }
+
+    public IEnumerator movimentacaoCerta()
+    {
+        yield return new WaitForSeconds(1);
+        StartCoroutine(moveDireita());
+        yield return new WaitForSeconds(1);
+        StartCoroutine(moveDireita());
+        yield return new WaitForSeconds(1);
+        StartCoroutine(moveDireita());
+        yield return new WaitForSeconds(1);
+        StartCoroutine(moveCima());
+        yield return new WaitForSeconds(1);
+        StartCoroutine(moveCima());
+        yield return new WaitForSeconds(1);
+        StartCoroutine(moveCima());
+        yield return new WaitForSeconds(1);
+        StartCoroutine(moveCima());        
+        yield return new WaitForSeconds(1);
+        FindObjectOfType<GameManager>().EndGame();
+    }    
+    
     private float distanceToMove = 1f;
     private float moveSpeed = 3f;
     private Vector3 endPosition;
     private Vector3 startPosition;
-    private bool isMoving = false;
+    
     private float t;
 
     public IEnumerator move()
@@ -93,33 +125,9 @@ public class Menu : MonoBehaviour
         StartCoroutine(moveBaixo());
     }
 
-    public void BotaoCerto()
-    {
-        if (!isMoving)
-        {
-            StartCoroutine(movimentacaoCerta());
-        }
-    }
 
-    public IEnumerator movimentacaoCerta()
-    {
-        yield return new WaitForSeconds(1);
-        StartCoroutine(moveDireita());
-        yield return new WaitForSeconds(1);
-        StartCoroutine(moveDireita());
-        yield return new WaitForSeconds(1);
-        StartCoroutine(moveDireita());
-        yield return new WaitForSeconds(1);
-        StartCoroutine(moveCima());
-        yield return new WaitForSeconds(1);
-        StartCoroutine(moveCima());
-        yield return new WaitForSeconds(1);
-        StartCoroutine(moveCima());
-        yield return new WaitForSeconds(1);
-        StartCoroutine(moveCima());
-        yield return new WaitForSeconds(1);        
-        FindObjectOfType<GameManager>().EndGame();
-    }
+
+
 
     public void BotaoZona()
     {
@@ -176,4 +184,5 @@ public class Menu : MonoBehaviour
     {
 
     }    
+
 }

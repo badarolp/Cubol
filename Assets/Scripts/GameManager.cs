@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     public GameObject ParabensUI;
 
     public GameObject TenteNovamenteUI;
-    
+
     public void Parabens()
     {
         Invoke("SetParabensActive", 1f);
@@ -24,11 +24,11 @@ public class GameManager : MonoBehaviour
         Invoke("SetTenteNovamenteActive", 1f);
         isPlaying = false;
         EndGame();
-    }    
+    }
 
     public void EndGame()
     {
-        if(isPlaying)
+        if (isPlaying)
         {
             Invoke("SetTenteNovamenteActive", 1f);
             TenteNovamenteUI.SetActive(true);
@@ -43,5 +43,5 @@ public class GameManager : MonoBehaviour
     void SetParabensActive()
     {
         ParabensUI.SetActive(true);
-    }    
+    }
 }
