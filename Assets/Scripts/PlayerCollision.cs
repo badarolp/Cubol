@@ -10,13 +10,13 @@ public class PlayerCollision : MonoBehaviour
         if (collisionInfo.collider.tag == "ZonaVermelha")
         {
             // movement.gameHasEnded = true;
-            movement.enabled = false;
-            FindObjectOfType<GameManager>().TenteNovamente();
+            // movement.enabled = false;
+            // FindObjectOfType<GameManager>().TenteNovamente();
 
         } 
         else if (collisionInfo.collider.tag == "End")
         {
-            FindObjectOfType<GameManager>().Parabens();
+            // FindObjectOfType<GameManager>().Parabens();
         }
     }
 }
