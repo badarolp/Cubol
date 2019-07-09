@@ -9,15 +9,12 @@ EditorBuildSettings:
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/GoogleARCore/Examples/ObjectManipulation/Scenes/ObjectManipulation.unity
-    guid: 9dba7e74f4d2b410f90b920f80528d44
-  - enabled: 1
-    path: Assets/Scenes/Mapa1.unity
-    guid: afbe6340fb8328e4eac4c5cf360164d2
-  - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: d512fe96f0a7ecf48b479c9f73a7927c
   - enabled: 1
     path: Assets/Scenes/ProcurarMapa.unity
     guid: d682afb5a26d7364db2ccd72b07414e2
+  - enabled: 1
+    path: Assets/Scenes/Mapa1.2.unity
+    guid: 26e26aef4d5fecd42a4165ffe169c618
   m_configObjects: {}
